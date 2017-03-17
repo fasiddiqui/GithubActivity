@@ -1,0 +1,12 @@
+#core {
+    width: 100%;
+    margin: 50px 50px 0 50px;
+}
+
+#user {
+    width: 300px;
+}
+
+pre {
+    width: 80%;
+}

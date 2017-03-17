@@ -1,0 +1,18 @@
+Files created:
+autoswap.sh <image name> : will perform an automatic hotswap either way.
+getconffile.sh : used in autoswap to get the contents of the confile in the container
+
+
+COMMANDS TO RUN:
+
+dorun.sh
+docker run -d -P --network ecs189_default --name web2 activity2
+docker ps -a (get sha of nginx)
+docker exec -it sha /bin/bash swap2.sh
+docker ps -a (get sha of activity1)
+docker rm sha -f
+docker run -d -P --network ecs189_default --name web1 activity
+docker ps -a (get sha of nginx)
+docker exec -it sha /bin/bash swap1.sh
+docker ps -a (get sha of activity2)
+docker rm sha -f
